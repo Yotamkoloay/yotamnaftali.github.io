@@ -1,0 +1,111 @@
+/*!
+ * Start Bootstrap - Landing Page v5.0.7 (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */body{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6{font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700}header.masthead{position:relative;background-color:#343a40;background:url(../img/bg-masthead.jpg) no-repeat center center;background-size:cover;padding-top:8rem;padding-bottom:8rem}header.masthead .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0;opacity:.3}header.masthead h1{font-size:2rem}@media (min-width:768px){header.masthead{padding-top:12rem;padding-bottom:12rem}header.masthead h1{font-size:3rem}}.showcase .showcase-text{padding:3rem}.showcase .showcase-img{min-height:30rem;background-size:cover}@media (min-width:768px){.showcase .showcase-text{padding:7rem}}.features-icons{padding-top:7rem;padding-bottom:7rem}.features-icons .features-icons-item{max-width:20rem}.features-icons .features-icons-item .features-icons-icon{height:7rem}.features-icons .features-icons-item .features-icons-icon i{font-size:4.5rem}.features-icons .features-icons-item:hover .features-icons-icon i{font-size:5rem}.testimonials{padding-top:7rem;padding-bottom:7rem}.testimonials .testimonial-item{max-width:18rem}.testimonials .testimonial-item img{max-width:12rem;box-shadow:0 5px 5px 0 #adb5bd}.call-to-action{position:relative;background-color:#343a40;background:url(../img/bg-masthead.jpg) no-repeat center center;background-size:cover;padding-top:7rem;padding-bottom:7rem}.call-to-action .overlay{position:absolute;background-color:#212529;height:100%;width:100%;top:0;left:0;opacity:.3}footer.footer{padding-top:4rem;padding-bottom:4rem}
+ 
+ /* All Products
+   ========================================================================== */
+   .product-one {
+	   margin-top: 10px;
+   }
+   
+   .product {
+	   display: -webkit-box;
+	   display: -webkit-flex;
+	   display: flex;
+	   flex-wrap: wrap;
+	}
+	
+	.product > .product-left {
+		display: flex;
+		flex-direction: column;
+	}
+   
+   .product-left {
+	   position: relative;
+	   text-align: center;
+	   padding-bottom: 20px;
+   }
+   
+   .product-left:hover .p-one {
+	   border: 1px solid #008080;
+	   -webkit-transition: 0.5s all ease;
+	   -moz-transition: 0.5s all ease;
+	   -o-transition: 0.5s all ease;
+	   transition: 0.5s all ease;
+   }
+   
+   .product-left:hover .p-one img {
+	   -webkit-transform: scale(0.9);
+	   -moz-transform: scale(0.9);
+	   -o-transform: scale(0.9);
+	   transform: scale(0.9);
+	   opacity: 1;
+   }
+   
+   .product-left:hover .mask {
+	   display: block;
+   }
+   
+   .product-left:hover a:hover {
+	   text-decoration: none;
+   }
+   
+   .p-one {
+	   border: 1px solid #B2B2B2;
+	   padding: 20px 15px;
+	   min-height: 100%;
+   }
+   
+   .p-one img {
+	   width: 100%;
+	   -webkit-transition-duration: 0.5s;
+	   -moz-transition-duration: 0.5s;
+	   -o-transition-duration: 0.5s;
+	   transition-duration: 0.5s;
+   }
+   
+   .mask {
+	   display: none;
+	   position: absolute;
+	   top: 40%;
+	   left: 33%;
+   }
+   
+   .mask span {
+	   background-color: #008080;
+	   color:#fff;
+	   font-size: 14px;
+	   padding: 6px 12px;
+   }
+   
+   .mask span:hover {
+	   background-color: #222;
+   }
+   
+   .mask span:focus {
+	   text-decoration: none;
+   }
+   
+   .item_price p i {
+	   color: #999;
+	   position: relative;
+	   font-style: normal;
+	   font-size: 14px;
+   }
+   
+   .item_price p i:before {
+	   background: #999 none repeat scroll 0 0;
+	   content: "";
+	   height: 1px;
+	   left: -20%;
+	   right: -20%;
+	   top: 45%;
+	   position: absolute;
+	   -webkit-transform: rotate(-8deg) translate(0, -50%);
+	   -moz-transform: rotate(-8deg) translate(0, -50%);
+	   -o-transform: rotate(-8deg) translate(0, -50%);
+	   transform: rotate(-8deg) translate(0, -50%);
+   }
+   
