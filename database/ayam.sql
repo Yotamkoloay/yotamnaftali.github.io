@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Jul 2023 pada 10.04
+-- Waktu pembuatan: 22 Agu 2023 pada 11.57
 -- Versi server: 10.1.38-MariaDB
 -- Versi PHP: 7.3.2
 
@@ -32,7 +32,6 @@ CREATE TABLE `ayam` (
   `id_ayam` varchar(7) NOT NULL,
   `id_kategori` int(11) NOT NULL,
   `id_satuan` int(11) NOT NULL,
-  `nama_ayam` varchar(100) NOT NULL,
   `harga` int(11) NOT NULL,
   `stok` int(11) NOT NULL,
   `foto` varchar(100) DEFAULT NULL,
@@ -47,9 +46,13 @@ CREATE TABLE `ayam` (
 -- Dumping data untuk tabel `ayam`
 --
 
-INSERT INTO `ayam` (`id_ayam`, `id_kategori`, `id_satuan`, `nama_ayam`, `harga`, `stok`, `foto`, `keterangan`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
-('A000001', 1, 1, 'Sad', 22222, 25, 'pepaya.jpg.jpg', 'asdawawwawa', 7, '2023-07-17 17:42:45', 5, '2023-07-17 19:50:28'),
-('A00001', 2, 1, 'asaaaaw', 7676767, 20, 'cengkih.jpg.jpg', 'asaa', 8, '2023-07-18 05:07:25', 8, '2023-07-18 05:07:25');
+INSERT INTO `ayam` (`id_ayam`, `id_kategori`, `id_satuan`, `harga`, `stok`, `foto`, `keterangan`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
+('A000001', 10, 2, 20000, 77, 'Dada.png', '', 17, '2023-08-12 13:57:40', 17, '2023-08-17 14:39:49'),
+('A000002', 11, 2, 12000, 0, 'Paha-Atas.png', '', 17, '2023-08-17 14:41:07', 17, '2023-08-17 14:41:07'),
+('A000003', 12, 2, 25000, 0, 'Drumstick.png', '', 17, '2023-08-17 14:41:32', 17, '2023-08-17 14:41:32'),
+('A000004', 14, 2, 21000, 0, 'Sayap.png', '', 17, '2023-08-17 14:41:50', 17, '2023-08-17 14:41:50'),
+('A000005', 15, 2, 50000, 0, 'Utuh.png', '', 17, '2023-08-17 14:42:04', 17, '2023-08-17 14:42:04'),
+('A000006', 10, 4, 23333, 0, 'Dada.png', '', 17, '2023-08-17 15:15:29', 17, '2023-08-17 15:16:06');
 
 -- --------------------------------------------------------
 
@@ -73,9 +76,8 @@ CREATE TABLE `ayam_keluar` (
 --
 
 INSERT INTO `ayam_keluar` (`id_ayam_keluar`, `tanggal_keluar`, `id_ayam`, `jumlah_keluar`, `harga`, `status`, `created_user`, `created_date`) VALUES
-('', '2023-07-12', 'A000001', 2, 1233321, 'Proses', 8, '2023-07-18 05:02:46'),
-('TP-2023-0000001', '2023-07-17', 'A000001', 2, 100000, 'Proses', 8, '2023-07-18 04:25:29'),
-('TP-2023-0000002', '2023-07-18', 'A000001', 2, 10000, 'Proses', 8, '2023-07-18 04:31:20');
+('TP-2023-0000001', '2023-08-12', 'A000001', 23, 30000, 'Approve', 18, '2023-08-12 15:43:31'),
+('TP-2023-0000002', '2023-08-17', 'A000004', 2, 22, 'Proses', 18, '2023-08-17 15:04:38');
 
 -- --------------------------------------------------------
 
@@ -97,8 +99,7 @@ CREATE TABLE `ayam_masuk` (
 --
 
 INSERT INTO `ayam_masuk` (`id_ayam_masuk`, `tanggal_masuk`, `id_ayam`, `jumlah_masuk`, `created_user`, `created_date`) VALUES
-('TM-2023-0000001', '2023-07-17', 'A000001', 23, 8, '2023-07-17 18:22:17'),
-('TM-2023-0000002', '2023-07-19', 'A000001', 2, 8, '2023-07-17 19:50:28');
+('TM-2023-0000001', '2023-08-04', 'A000001', 100, 17, '2023-08-12 14:10:42');
 
 -- --------------------------------------------------------
 
@@ -120,11 +121,12 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
-(1, 'ayam', 5, '2022-03-07 17:09:38', 5, '2022-03-07 17:18:45'),
-(2, 'Pohon', 5, '2022-03-07 17:11:15', 5, '2022-03-07 17:11:15'),
-(4, 'Buah', 5, '2022-03-08 14:16:00', 5, '2022-04-20 12:46:30'),
-(5, 'Sayuran', 5, '2022-04-20 12:48:37', 5, '2022-04-20 12:48:37'),
-(6, 'asd', 5, '2023-07-17 17:41:31', 5, '2023-07-17 17:41:31');
+(10, 'Dada', 17, '2023-08-12 13:52:37', 17, '2023-08-12 13:52:37'),
+(11, 'Paha Atas', 17, '2023-08-17 14:40:00', 17, '2023-08-17 14:40:00'),
+(12, 'Paha Bawah', 17, '2023-08-17 14:40:08', 17, '2023-08-17 14:40:08'),
+(13, 'Ceker', 17, '2023-08-17 14:40:16', 17, '2023-08-17 14:40:16'),
+(14, 'Sayap', 17, '2023-08-17 14:40:29', 17, '2023-08-17 14:40:29'),
+(15, 'Ayam Utuh', 17, '2023-08-17 14:40:34', 17, '2023-08-17 14:40:34');
 
 -- --------------------------------------------------------
 
@@ -149,8 +151,9 @@ CREATE TABLE `profil` (
 --
 
 INSERT INTO `profil` (`id_profil`, `nama`, `jenis_kelamin`, `tempat`, `telepon`, `luas`, `foto`, `created_at`, `updated_at`) VALUES
-(1, 'manado', 'L', 'Asda', '586586467', '3142', '1469574126_users-10.png', '2022-03-07 17:49:36', '2022-03-08 14:14:10'),
-(2, 'asdw', 'P', 'qwertz', 'zxca', '2314', NULL, '2022-03-07 17:58:54', '2022-03-07 17:58:54');
+(8, 'Prihati Lahuwang', 'L', '', '08123456789', '', NULL, '2023-08-12 13:43:30', '2023-08-12 13:43:30'),
+(9, 'Gebideril', 'L', '', '08123456789', '', NULL, '2023-08-12 13:50:27', '2023-08-12 13:50:27'),
+(10, 'Admin', 'L', 'Manado', '08123456789', '', '1586038.jpg', '2023-08-12 15:38:00', '2023-08-22 06:56:10');
 
 -- --------------------------------------------------------
 
@@ -172,7 +175,8 @@ CREATE TABLE `satuan` (
 --
 
 INSERT INTO `satuan` (`id_satuan`, `nama_satuan`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
-(1, 'Kg', 5, '2022-04-22 11:41:41', 5, '2022-04-22 11:41:41');
+(2, 'Kilogram', 17, '2023-08-12 13:52:27', 17, '2023-08-12 13:52:27'),
+(4, 'Ember', 17, '2023-08-17 15:14:55', 17, '2023-08-17 15:14:55');
 
 -- --------------------------------------------------------
 
@@ -196,10 +200,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `id_profil`, `hak_akses`, `status`, `created_at`, `updated_at`) VALUES
-(5, 'admin', '202cb962ac59075b964b07152d234b70', 1, 'Admin', 'aktif', '2022-03-02 20:02:51', '2022-04-15 17:05:41'),
-(6, 'user', '202cb962ac59075b964b07152d234b70', 2, 'Pembeli', 'aktif', '2022-03-07 17:59:40', '2023-07-18 04:32:32'),
-(7, 'yan', '202cb962ac59075b964b07152d234b70', NULL, '', 'aktif', '2023-07-17 16:21:45', '2023-07-17 16:21:45'),
-(8, 'yotam', '202cb962ac59075b964b07152d234b70', NULL, 'Penjual', 'aktif', '2023-07-17 17:58:22', '2023-07-17 17:58:22');
+(17, 'Prihati', '202cb962ac59075b964b07152d234b70', 8, 'Penjual', 'aktif', '2023-08-12 13:50:53', '2023-08-12 13:50:53'),
+(18, 'Gebi', '202cb962ac59075b964b07152d234b70', 9, 'Pembeli', 'aktif', '2023-08-12 13:51:05', '2023-08-12 13:51:05'),
+(19, 'Admin', '202cb962ac59075b964b07152d234b70', 10, 'Admin', 'aktif', '2023-08-12 15:38:14', '2023-08-12 15:38:14');
 
 --
 -- Indexes for dumped tables
@@ -269,25 +272,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `profil`
 --
 ALTER TABLE `profil`
-  MODIFY `id_profil` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_profil` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `satuan`
 --
 ALTER TABLE `satuan`
-  MODIFY `id_satuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_satuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
