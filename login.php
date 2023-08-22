@@ -25,12 +25,11 @@
 
 </head>
 
-<body class="login-page bg-login">
-  <div class="login-box">
-    <div style="color:#666666" class="login-logo">
-      
-      <h3><b> Selamat Datang </b></h3>
-    </div><!-- /.login-logo -->
+<div class="login-box">
+      <div style="color:#28166f" class="login-logo">
+      <img src='assets/img/logoo.png' width='110' height='110'> <br>
+        <h3><b> PENJUALAN AYAM </b></h3>
+      </div><!-- /.login-logo -->
     <?php
     // fungsi untuk menampilkan pesan
     // jika alert = "" (kosong)
@@ -81,7 +80,7 @@
         <div class="row">
           <div class="col-xs-12">
             <input type="submit" class="btn-success btn-lg btn-block btn" name="login" value="Login" />
-            <a href="index.php" class="btn-danger btn-lg btn-block btn">Kembali</a>
+            <a href="index.php" class="btn-primary btn-lg btn-block btn">Hubungi Admin</a>
           </div><!-- /.col -->
         </div>
       </form>

@@ -3,9 +3,7 @@
   <h1>
     <i class="fa fa-sign-out icon-title"></i> Permintaan
 
-    <a class="btn btn-primary btn-social pull-right" href="?module=form_laporan&form=add" title="Tambah Data" data-toggle="tooltip">
-      <i class="fa fa-plus"></i> Tambah
-    </a>
+  
   </h1>
 
 </section>
@@ -71,7 +69,6 @@
                 <th class="center">No.</th>
                 <th class="center">Tanggal</th>
                 <th class="center">Pengguna</th>
-                <th class="center">Nama Ayam</th>
                 <th class="center">Jumlah Keluar</th>
                 <th class="center">Ditawar</th>
                 <th class="center">Total Harga</th>
@@ -83,9 +80,9 @@
             <?php  
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel ayam
-            $query = mysqli_query($mysqli, "SELECT a.id_ayam_keluar,a.created_user,a.harga,a.tanggal_keluar,a.id_ayam,a.jumlah_keluar,a.status,b.id_ayam,b.nama_ayam,b.id_satuan,b.stok,c.id_satuan,c.nama_satuan,d.username,d.id_user
+            $query = mysqli_query($mysqli, "SELECT a.id_ayam_keluar,a.created_user,a.harga,a.tanggal_keluar,a.id_ayam,a.jumlah_keluar,a.status,b.id_ayam,b.id_satuan,b.stok,c.id_satuan,c.nama_satuan,d.username,d.id_user
                                             FROM ayam_keluar as a INNER JOIN ayam as b INNER JOIN satuan as c INNER JOIN users as d 
-                                            ON a.id_ayam=b.id_ayam AND b.id_satuan=c.id_satuan AND a.created_user=d.id_user 
+                                            ON a.id_ayam=b.id_ayam AND b.id_satuan=c.id_satuan AND a.created_user=d.id_user WHERE a.status='Approve'
                                             ORDER BY id_ayam_keluar DESC")
                                             or die('Ada kesalahan pada query tampil Data Ayam Keluar: '.mysqli_error($mysqli));
 
@@ -103,7 +100,6 @@
                 <td width='30' class='center'>$no</td>
                 <td width='100' class='center'>$tanggal_keluar</td>
                 <td width='90' class='center'>$data[username]</td>
-                <td width='150'>$data[nama_ayam]</td>
                 <td width='120'>$data[jumlah_keluar] $data[nama_satuan]</td>  
                 <td width='120'> Rp.$harga</td>
                 <td width='120'> Rp.$tot_harga</td>

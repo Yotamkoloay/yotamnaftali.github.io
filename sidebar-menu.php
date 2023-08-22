@@ -26,7 +26,7 @@ if ($_SESSION['hak_akses'] == 'Admin') { ?>
 		}
 
 		// jika menu ubah penilaian dipilih, menu ubah penilaian aktif
-		if ($_GET["module"] == "ayam_keluar") { ?>
+		if ($_GET["module"] == "laporan") { ?>
 			<li class="active">
 				<a href="?module=laporan"><i class="fa fa-folder"></i> Laporan Ayam</a>
 			</li>
@@ -35,24 +35,9 @@ if ($_SESSION['hak_akses'] == 'Admin') { ?>
 		// jika tidak, menu ubah penilaian tidak aktif
 		else { ?>
 			<li>
-				<a href="?module=ayam_keluar"><i class="fa fa-folder"></i> Laporan Ayam</a>
+				<a href="?module=laporan"><i class="fa fa-folder"></i> Laporan Ayam</a>
 			</li>
-		<?php
-		}
-
-		// jika menu ubah penilaian dipilih, menu ubah penilaian aktif
-		if ($_GET["module"] == "profil") { ?>
-			<li class="active">
-				<a href="?module=profil"><i class="fa fa-folder"></i> Profil</a>
-			</li>
-		<?php
-		}
-		// jika tidak, menu ubah penilaian tidak aktif
-		else { ?>
-			<li>
-				<a href="?module=profil"><i class="fa fa-folder"></i> Profil</a>
-			</li>
-
+		
 			<?php
 	}
 
